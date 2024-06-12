@@ -1,0 +1,76 @@
+.action_area {
+	display: flex;
+	align-items: end;
+	flex-wrap: wrap;
+}
+
+.action_area * {
+	flex-shrink: 0;
+}
+
+.keybind_parent {
+	display: inline-block;
+	vertical-align: top;
+}
+
+
+.keybind_button {
+	background: #c9c9c9;
+	border: none;
+	border-bottom: 4px gray solid;
+	margin-top: 0;
+	padding: 4px 8px;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-left: 10px;
+	transition: all .1s linear;
+}
+.keybind_button:active {
+	border-bottom: 0 gray solid;
+	margin-top: 4px;
+}
+
+.keybind_keycode {
+	text-decoration: underline;
+	margin-left: 4px;
+	color: #bd1f1f;
+}
+
+.keybind_notification {
+  display: inline-block;
+	position: fixed;
+	bottom: 1em;
+	right: 1em;
+  padding : 1em;
+  background: #000000b8;
+  color: white;
+  border-radius: .5em;
+	animation-name: notify;
+	animation-timing-function: linear;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	z-index: 100;
+}
+
+.keybind_error {
+	background-color: #9f0000;
+}
+
+@keyframes notify {
+	0% {
+		transform: translate(0, 1em);
+		opacity: 0;
+	}
+	10% {
+		transform: translate(0, 0);
+		opacity: 1;
+	}
+	90% {
+		transform: translate(0, 0);
+		opacity: 1;
+	}
+	100% {
+		transform: translate(0, 1em);
+		opacity: 0;
+	}
+}

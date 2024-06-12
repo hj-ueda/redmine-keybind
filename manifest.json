@@ -1,0 +1,20 @@
+{
+  "name": "Remine Keybinds",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "自分用",
+  "content_scripts": [ {
+    "js": [ "content.js" ],
+    "css": ["style.css"],
+    "matches": [ "https://52.196.55.19/redmine/issues/*" ],
+    "run_at": "document_start",
+    "world": "MAIN"
+  } ],
+  "icons": {
+    "16": "./image/icon.png",
+    "48": "./image/icon.png",
+    "128": "./image/icon.png"
+  },
+  "host_permissions": [ "https://52.196.55.19/redmine/issues/*" ],
+  "permissions": [ "scripting", "activeTab" ]
+}
